@@ -1,0 +1,15 @@
+<p>welcome works!</p>
+<div class="container">
+you can manage your employess here <a routerLink="/employee">here</a>
+</div>
+
+<div class="container">
+    click here to get customized message
+    <button (click)="getWelcomeMessage()">Welcome message</button>
+</div>
+
+
+<div class="container" *ngIf="welcomeMessageFromService">
+<h2> your customeisezd welcome msg </h2>
+ {{welcomeMessageFromService}}
+</div>

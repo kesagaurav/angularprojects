@@ -1,0 +1,31 @@
+<div class="alert alert-success" *ngIf='message'>
+  {{message}}
+  </div>
+
+<table border="1">
+
+
+
+    <caption> My EmployeeList</caption>
+    <thead>
+        <tr>
+            <th>id</th>
+            <th>name</th>
+            <th>password</th>
+            <th>Update</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody>     <!-- let employee: employees-->
+           <tr *ngFor="let employee of employees">
+               <td>{{employee.id}}</td>
+               <td>{{employee.name}}</td>
+               <td>{{employee.password}}</td>
+               <td><button (click)="updateEmployee(employee.id)" class="btn btn-success">update</button></td>
+
+               <td><button (click)="deleteEmployee(employee.id)" class="btn btn-warning">Delete</button></td>
+           </tr>
+    </tbody>
+
+</table>
+
